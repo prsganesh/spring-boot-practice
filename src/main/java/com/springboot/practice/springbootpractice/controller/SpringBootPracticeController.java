@@ -16,8 +16,12 @@ import com.springboot.practice.springbootpractice.service.StudentDataService;
 
 @RestController
 public class SpringBootPracticeController {
+	
+	public SpringBootPracticeController(StudentDataService studentDataService) {
+		this.studentDataService=studentDataService;
+	}
 
-	@Autowired
+	
 	StudentDataService studentDataService;
 
 	@GetMapping("/get")
